@@ -477,7 +477,7 @@
       `).join("");
     } 
     else if (viewKey === "consumables") {
-      titleElem.textContent = "1.0 Consumables Management";
+      titleElem.textContent = "Consumables Management";
       container.innerHTML = NAV_TREE.consumables.map(sub => `
         <div class="nav-card" onclick="drillDown('${sub.id}', '${sub.title}')">
           <div class="nav-card-info">
@@ -492,10 +492,10 @@
       // Direct Link Cards
       const links = NAV_TREE[viewKey] || [];
       const titleMap = {
-        standard_items: "1.1 Standard Item Applications",
-        non_standard_items: "1.2 Non-Standard Item Applications",
-        audits: "2.0 e-Audits Applications",
-        ro: "3.0 Water Treatment System Applications"
+        standard_items: "Standard Item Applications",
+        non_standard_items: "Non-Standard Item Applications",
+        audits: "e-Audits Applications",
+        ro: "Water Treatment System Applications"
       };
       titleElem.textContent = titleMap[viewKey] || "Applications";
 
@@ -533,11 +533,11 @@
     const breadcrumbs = document.getElementById("breadcrumbs");
     const nameMap = {
       root: "Main Portal",
-      consumables: "1.0 Consumables",
-      standard_items: "1.1 Standard Item",
-      non_standard_items: "1.2 Non-Standard Item",
-      audits: "2.0 e-Audits",
-      ro: "3.0 Water Treatment System"
+      consumables: "Consumables",
+      standard_items: "Standard Item",
+      non_standard_items: "Non-Standard Item",
+      audits: "e-Audits",
+      ro: "Water Treatment System"
     };
 
     breadcrumbs.innerHTML = navHistory.map((key, idx) => {
